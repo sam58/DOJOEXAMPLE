@@ -1,0 +1,18 @@
+define([
+       "ecm/widget/dialog/ConfirmationDialog",
+    ],
+    function ( ConfirmationDialog) {
+      return {
+       performAction:function() {
+                    var encDialog = new ConfirmationDialog({
+                        title:"Внимание !",
+                        text:"Вы уверены, что хотите удалить выбранные элементы безвозвратно?",
+                        cancelButtonDefault:true,
+                        onExecute: lang.hitch(this, function(items){
+                          что то делаем
+                        }, параметр)
+                    });
+                encDialog.show();
+            },
+      }
+    });
